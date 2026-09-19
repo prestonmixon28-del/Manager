@@ -12,5 +12,6 @@ public class Main {
         config1.setVolume(80);
 
         System.out.println("Voloume from config2 " + config2.getVolume());
+        
     }
 }
