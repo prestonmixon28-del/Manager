@@ -2,16 +2,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ConfigurationManager config1 = ConfigurationManager.getInstance();
-        ConfigurationManager config2 = ConfigurationManager.getInstance();
-    
-        System.out.println("same object " + (config1 == config2));
+        AudioSystem audio = new AudioSystem();
+        GraphicsRenderer graphics = new GraphicsRenderer();
 
-        System.out.println("Volume " + config1.getVolume());
+        audio.playSound();
+        graphics.render();
 
-        config1.setVolume(80);
+        System.out.println("--changing settings --");
 
-        System.out.println("Voloume from config2 " + config2.getVolume());
-        
+        audio.changeVolume(80);
+        graphics.changeResolution("2560x1440")
+
+        System.out.println("-- checking updated settings --");
+
+        audio.playSound();
+        graphics.render();
+
     }
 }
